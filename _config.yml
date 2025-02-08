@@ -2,6 +2,6 @@ include:
   - _attachments
 theme: jekyll-theme-minimal
 url: "https://esokullu.github.io"
-baseurl: "https://esokullu.github.io/myblog/"
+baseurl: "myblog"
 title: "Emre Sokullu"
 description: "Blog"
