@@ -1,7 +1,6 @@
 include:
   - _attachments
 theme: jekyll-theme-minimal
-baseurl: "/myblog"   # name of your repo, with a leading slash
 url: "https://esokullu.github.io"
 title: "Emre Sokullu"
 description: "Blog"
