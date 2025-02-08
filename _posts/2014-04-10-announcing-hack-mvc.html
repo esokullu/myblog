@@ -1,0 +1,44 @@
+---
+layout: post
+title: Announcing hack-mvc
+date: 2014-04-10 10:19:19.000000000 +03:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories: []
+tags: []
+meta:
+  _publicize_pending: '1'
+  _import_session_id: 63d21b7996734
+  _import_original_post_id: '0'
+  _elasticsearch_data_sharing_indexed_on: '2024-11-18 14:21:45'
+author:
+  login: x4pjkg22jj
+  email: x4pjkg22jj@privaterelay.appleid.com
+  display_name: EMRE SOKULLU
+  first_name: ''
+  last_name: ''
+permalink: "/2014/04/10/announcing-hack-mvc/"
+---
+<p><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd"><br />
+<html><body></p>
+<figure class="wp-caption">
+<figcaption class="wp-caption-text">Google Data Center, artificialbrains.com</figcaption>
+</figure>
+<p><br><br />
+<h4>hack-mvc, a simple MVC Framework for the hack lang </h4>
+<p>Back in 2010, while <a href="http://grou.ps/" target="_blank">GROU.PS</a> was a free service pushing 1PB data with 8 million monthly unique visitors, we were bleeding $100K/month on server related costs. The platform was running on ~ 70 beefy servers on SoftLayer and we were using certain AWS products such as S3 and Cloudfront. It was a pretty painful time for a startup that had only raised $2mm with no monetization plans in the horizon. But it was also a big lesson to squeeze every dollar you can out of your CPUs, especially if you’re offering a B2C product that’s free to use.</p>
+<p>That’s why I think Facebook’s recent <a href="https://code.facebook.com/posts/264544830379293/hack-a-new-programming-language-for-hhvm/" target="_blank">announcement</a> of <a href="http://hacklang.org/" target="_blank">hack</a> lang (and hhvm itself) are big wins for the consumer internet startup community. PHP is great for getting started, but it is not the most CPU friendly language and runtime out there. And at some point, you’ll need to think about those too.</p>
+<p>Fast-forward today, GROU.PS itself is a subscription based business which can finance itself but right ahead of a new (free) consumer product we’ll launch, we wanted to code the frontend in the hack lang, in an obsessive attempt to make the product as scalable as possible at the lowest cost.</p>
+<p>So without further ado, here comes the <a href="https://github.com/esokullu/hack-mvc" target="_blank">hack-mvc</a>. The MVC framework that we’ll use for the frontend of our upcoming app, and hopefully others will follow and benefit from it.</p>
+<p>hack-mvc is far from being a complete MVC framework but it’ll do the work for us, and it’s been very instructional. hack-mvc is a fork of <a href="http://gilbitron.github.io/PIP/" target="_blank">pip</a> so I should also give a huge credit to <a href="http://craig-russell.co.uk/" target="_blank">Craig Russell</a> for his work.</p>
+<p>My original goal was to write a fully strict hack framework with dynamodb support in the Model layer and a rich View with mustache.php but it didn’t take long for me to discover the following limitations that rendered the job impossible.</p>
+<ul>
+<li>The fact that the only top-level statements that can be present in the strict mode are requires, it is just impossible to launch the whole thing in strict mode. I think this is just an after-thought and the hack lang team will loosen this restriction by allowing at least a static class method to be run by default similarly to Java.</li>
+<li>The strict doesn’t allow one to use the eval function (eval is evil) or statements like “$helper = new $name;” and that makes the life of a strictly hack MVC framework coder a hell. The reasoning can’t be type checking because as a programmer, I could have specified an abstract class name as the type of $helper and only assign the descendants of that class dynamically using the $name variable.</li>
+<li>Not a big deal, but the need for hhi implementations is just confusing.</li>
+</ul>
+<p>These limitations made it impossible to write a fully hack-strict MVC framework. That’s why while most of the framework is written hack-strict, there are parts that are hack-partial but I’m proud to say at least there’s no use of decl.</p>
+<p></body></html></p>

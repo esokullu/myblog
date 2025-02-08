@@ -1,0 +1,47 @@
+---
+layout: post
+title: GraphQL, the future of APIs
+date: 2017-07-13 01:02:10.000000000 +03:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories: []
+tags: []
+meta:
+  _publicize_pending: '1'
+  _import_session_id: 63d21b7996734
+  _import_original_post_id: '0'
+  _elasticsearch_data_sharing_indexed_on: '2024-11-18 14:21:52'
+author:
+  login: x4pjkg22jj
+  email: x4pjkg22jj@privaterelay.appleid.com
+  display_name: EMRE SOKULLU
+  first_name: ''
+  last_name: ''
+permalink: "/2017/07/13/graphql-the-future-of-apis/"
+---
+<p><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd"><br />
+<html><body></p>
+<p>Facebook may not be the favorite company of the open web community, for <a href="http://altplatform.org/2017/05/30/open-web-manifesto/" target="_blank">some good reasons</a>. But when it comes to open source, most developers take advantage of their tools, libraries, and frameworks in one way or another. In particular, Javascript (Node.js) and PHP have advanced by leaps and bounds largely thanks to Facebook’s contributions. Although, one such technology that’s often overlooked is <a href="http://graphql.org/" target="_blank">GraphQL</a>, which, for many, has real potential to replace the infrastructure of the connected web, the REST APIs.</p>
+<h4>Drawbacks of REST APIs</h4>
+<p>REST is good, that is until it becomes a hairball.</p>
+<p>For simple, single-purpose APIs like <a href="https://www.flickr.com/services/api/" target="_blank">Flickr’s</a>, it does the job, but as the Facebook’s Graph API <a href="https://developers.facebook.com/docs/graph-api" target="_blank">documentation</a> shows, its flat structure becomes unmanageable with multi-function, multivariate systems.</p>
+<p>[caption id=”attachment_497" align=”aligncenter” width=”703"]</p>
+<figure><img data-width="703" data-height="397" src="{{site.baseurl}}/./haydin/2017/07/0*Tm8gJZd6BnTaSiVK.png"></figure>
+<p>Even this formatted view of REST APIs is overwhelmingly complex.[/caption]</p>
+<p>Nevertheless, REST’s design with primitive pagination and no support for slicing make it a no-go for complex queries. For example, this GraphQL example below:</p>
+<figure><img data-width="1024" data-height="237" src="{{site.baseurl}}/./haydin/2017/07/0*XWM2G-HZPOwHzosj.png"></figure>
+<p>where we query movie heroes with their name and the names of the first of two of their friends would take multiple REST API calls to accomplish. More queries only add up to the unreadability of REST’s already ugly syntax.</p>
+<h4>JSON to the rescue</h4>
+<p>When JSON first came out, in Steve Jobs’ saying, it was a glass of ice water to all the developers out there in the inter-connected web services hell with <a href="https://en.wikipedia.org/wiki/SOAP_%28protocol%29" target="_blank">SOAP</a> and co.</p>
+<p>GraphQL is heavily inspired by JSON’s success, as it uses a similar simple format to define the APIs. Moreover, for the very first time, it encompasses:</p>
+<ul>
+<li>queries (the equivalent of SELECT in SQL),</li>
+<li>mutation (the equivalent of INSERT/UPDATE in SQL)</li>
+<li>and schema.</li>
+</ul>
+<p>in a single format, which makes it uniquely singular to define and use web services.</p>
+<p>GraphQL is still work-in-progress for the most part, but it is a good start. The <a href="http://graphql.org" target="_blank">website</a> claims it has already been explored or used by Yelp, Intuit, Pinterest and Coursera. However, its success will only depend on the indie developers who can up the ante with new tools, implementations, and specs around current drafts.</p>
+<p></body></html></p>

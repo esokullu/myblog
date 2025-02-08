@@ -1,0 +1,102 @@
+---
+layout: post
+title: How to create a Tinder clone in Phở
+date: 2020-05-08 12:10:19.000000000 +03:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories: []
+tags: []
+meta:
+  _publicize_pending: '1'
+  _import_session_id: 63d21b7996734
+  _import_original_post_id: '0'
+  _oembed_3177be392df22bf5a25e65bc5833edde: <div class="embed-youtube"><iframe title="Pho
+    Networks Gapp Designer Tool" width="500" height="375" src="https://www.youtube.com/embed/7QpiE-2cfu4?feature=oembed"
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen></iframe></div>
+  _oembed_time_3177be392df22bf5a25e65bc5833edde: '1726290384'
+  _oembed_8f96ce6c576e75307beb05752bf59ce6: <div class="embed-youtube"><iframe title="Pho
+    Networks Gapp Designer Tool" width="750" height="563" src="https://www.youtube.com/embed/7QpiE-2cfu4?feature=oembed"
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen></iframe></div>
+  _oembed_time_8f96ce6c576e75307beb05752bf59ce6: '1731470732'
+  _elasticsearch_data_sharing_indexed_on: '2024-11-18 14:21:41'
+author:
+  login: x4pjkg22jj
+  email: x4pjkg22jj@privaterelay.appleid.com
+  display_name: EMRE SOKULLU
+  first_name: ''
+  last_name: ''
+permalink: "/2020/05/08/how-to-create-a-tinder-clone-in-pho/"
+---
+<p><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd"><br />
+<html><body></p>
+<p><em>This article was originally published on </em><a href="https://ideasforfree.org" target="_blank"><em>Ideas For Free</em></a><em> at </em><a href="https://ideasforfree.org/2020/05/08/how-to-create-a-tinder-clone-in-pho/" target="_blank"><em>https://ideasforfree.org/2020/05/08/how-to-create-a-tinder-clone-in-pho/</em></a></p>
+<p>In this tutorial, we’ll be creating a Tinder clone, in under 1 hour using <a href="https://www.phonetworks.org/" target="_blank">Phở Networks</a>, an open-source no-code platform that makes it seamlessly easy to create social applications.</p>
+<p>With Phở, you define your app in “graph” format (as shown below), and it generates the APIs in a breeze.</p>
+<figure class="wp-caption"><img data-width="1200" data-height="585" src="{{site.baseurl}}/./haydin/2020/05/1*ov2-8kKASYX7YzXXqWokrA.jpeg"><br />
+<figcaption class="wp-caption-text">a sample social app with forum functional along with subgroups</figcaption>
+</figure>
+<p>Phở depends on <a href="https://www.php.net/" target="_blank">PHP 7+</a>, <a href="https://redis.io/" target="_blank">Redis</a> and <a href="https://neo4j.com/" target="_blank">Neo4J</a>; so make sure you have them installed on your system before we start.</p>
+<ul>
+<li><a href="https://redis.io/download" target="_blank">Redis Installation Instructions</a></li>
+<li><a href="https://neo4j.com/docs/operations-manual/current/installation/" target="_blank">Neo4J Installation Instructions</a></li>
+</ul>
+<p>Phở uses Redis as its persistent (and lightning fast) keeper-of-truth, while Neo4J acts as the index with its <a href="https://neo4j.com/developer/cypher-query-language/" target="_blank">Cypher</a> query language. Thanks to this graph-native backend, you can query your Phở app in a language that’s in native graph format:</p>
+<pre><code>MATCH (m)-[:like]-&gt;(f) WHERE m.sex="male" AND f.sex="female" RETURN f;</code></pre>
+<p>The query above would fetch all female users with at least 1 like.</p>
+<p>Needless to add, Phở is a declarative language. All you need to do is to define the core components of your apps (also called as, nodes and edges) in a whiteboard-friendly way, as follows:</p>
+<ul>
+<li>User</li>
+<li>Like</li>
+<li>Message</li>
+</ul>
+<p>Voila.</p>
+<p>So how do we implement this? Fortunately, there is a simple <a href="https://www.phonetworks.org/designer.html" target="_blank">GUI</a> (graphical user interface) which lets you draw the application in a whiteboard friendly way as below:</p>
+<figure><img data-width="1200" data-height="709" src="{{site.baseurl}}/./haydin/2020/05/1*wwC7L03qkPOCwUBzEzPJ0g.png"></figure>
+<p>To see how it works, take a look at the 15-minutes long tutorial video below:</p>
+<p>[embed]https://www.youtube.com/watch?v=7QpiE-2cfu4[/embed]
+<p>At the end, you’ll create a GraphQL recipe similar to: <a href="https://github.com/esokullu/GroupRouletteRecipe" target="_blank">https://github.com/esokullu/GroupRouletteRecipe</a></p>
+<p>We need to compile this and serve it via REST. To do that install pho-cli from <a href="https://github.com/phonetworks/pho-cli/releases/download/0.3/pho.phar" target="_blank">Github</a>.</p>
+<p>After you download the file, copy it to your global binary path such as /<code>usr/local/bin</code> on UNIX systems, so it can be called from anywhere. Also, make sure it’s executable by running: <code>chmod +x /usr/local/bin/pho</code></p>
+<p>Then, while you’re on the terminal, run</p>
+<pre><code>&gt; pho init</code></pre>
+<p>This will start a CLI dialog with five easy questions:</p>
+<ul>
+<li>App Name</li>
+<li>App Description</li>
+<li>App Template: You must select 6 (custom) here. It will ask you the path to your recipe. Either you can create it on your own as shown above, download, and enter that path; or just point to <a href="https://github.com/esokullu/GroupRouletteRecipe" target="_blank">https://github.com/esokullu/grouprouletterecipe</a> for a quick start.</li>
+<li>Founder Username: keep it “admin”</li>
+<li>Founder Password</li>
+<li>Founder Email</li>
+</ul>
+<p>Once you fill these out, it will create a folder with a bunch of files and folders, including the following key ones:</p>
+<ul>
+<li>
+<code>schema/: </code>this is the folder where we will place the GraphQL source code.</li>
+<li>
+<code>build/</code>: this is the folder where compiled GraphQL schema will reside.</li>
+</ul>
+<p>Then, we go to the root folder of our project, and install the dependencies using <a href="https://getcomposer.org/" target="_blank">Composer</a>. Suppose, the App Name was “grouproulette”, here’s what we do:</p>
+<pre><code>&gt; cd grouproulette<br>&gt; composer install</code></pre>
+<p>We could have executed <code>pho build</code> to compile our schema folder (in other words, the recipe) but it’s already baked into in this example, so we skip that.</p>
+<p>Voila…</p>
+<p>Now we have a working-kernel, which we should pass to our REST API server, so we can connect it to our mobile app.</p>
+<p>If you need to change your server settings on the Phở side (your project folder) make sure to edit the .env file there. Please note it’s a hidden file so you may not be able to see it in your filesystem browser.</p>
+<p>Then run:</p>
+<pre><code>&gt; php public/api/index.php &amp;</code></pre>
+<p>Now if all goes well, when you visit <a href="http://localhost/founder" target="_blank">http://localhost/founder</a> on your browser, you should see a JSON response like:</p>
+<pre><code>{<br>  "success": true,<br>  "id":      "427501bd323e5e40f05b9fb4e769714a",<br>  "class":   "PhoNetworksAutogenerated\\User"<br>}</code></pre>
+<p>OK, now our REST APIs are working fine! For reference to the full set of commands, visit <a href="https://www.phonetworks.org/assets/restapi.htm" target="_blank">https://www.phonetworks.org/assets/restapi.htm</a></p>
+<p>The default <a href="https://github.com/phonetworks/pho-server-rest" target="_blank">Phở Server REST</a> comes with the <code>login</code>, <code>logout</code>, and <code>signup</code> functions in its <a href="https://ideasforfree.org/blob/master/src/Pho/Server/Rest/Controllers/AuthenticationController.php" target="_blank">Authentication Controller</a>. You may extend it further by editing the <code>public/api/index.php</code> file as documented on Phở Server REST’s <a href="https://github.com/phonetworks/pho-server-rest/blob/master/README.md" target="_blank">README</a> file.</p>
+<figure><img data-width="1236" data-height="480" src="{{site.baseurl}}/./haydin/2020/05/1*UPaJTG8kQM2eZ1UuqIUjhA.png"></figure>
+<p>To illustrate the signup call, a sample GET request would be:</p>
+<pre><a href="http://localhost/signup?param1=joe&amp;param2=joe@gmail.com&amp;param3=secret&amp;param4=01/15/1993&amp;param5=&amp;param6=http://google.com/emre.gif&amp;param7=0" target="_blank">http://localhost/signup?param1=joe&amp;param2=joe@gmail.com&amp;param3=secret&amp;param4=01/15/1993&amp;param5=&amp;param6=http://google.com/emre.gif&amp;param7=0</a></pre>
+<p>Hope this helps! Should you have any questions, feel free to comment or shoot me an email at emre@phonetworks.org</p>
+<p>Last but not least, if you need funding for the apps you create using Phở, we can <a href="https://ideasforfree.org/2020/01/26/announcing-a-150000%e2%82%ba%e2%80%8e-fund-to-invest-in-the-ideas-on-this-blog/" target="_blank">help</a>!</p>
+<p></body></html></p>

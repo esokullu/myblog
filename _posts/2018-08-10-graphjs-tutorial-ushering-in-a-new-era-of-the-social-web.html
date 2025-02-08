@@ -1,0 +1,81 @@
+---
+layout: post
+title: 'GraphJS Tutorial: Ushering in a new era of the Social Web'
+date: 2018-08-10 01:50:08.000000000 +03:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories: []
+tags: []
+meta:
+  _publicize_pending: '1'
+  _import_session_id: 63d21b7996734
+  _import_original_post_id: '0'
+  _elasticsearch_data_sharing_indexed_on: '2024-11-18 14:21:44'
+author:
+  login: x4pjkg22jj
+  email: x4pjkg22jj@privaterelay.appleid.com
+  display_name: EMRE SOKULLU
+  first_name: ''
+  last_name: ''
+permalink: "/2018/08/10/graphjs-tutorial-ushering-in-a-new-era-of-the-social-web/"
+---
+<p><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd"><br />
+<html><body></p>
+<p>Connecting people around shared interests, passions and goals, and helping them solve problems and discover new horizons, is a hard yet noble problem. It should be the ultimate goal of the social web.</p>
+<p>It’s certainly our goal at <a href="https://www.groups-inc.com" target="_blank">Grou.ps</a>. And today we’re releasing <a href="https://github.com/phonetworks/graphjs" target="_blank">GraphJS</a>, an open source set of “stickers” that enables social capabilities on any web page. It makes it easy decorating your site with social features like:</p>
+<ul>
+<li>
+<a href="https://graphjs.com/docs/components/auth" target="_blank">a powerful authentication infrastructure</a>,</li>
+<li>
+<a href="https://graphjs.com/docs/components/forum" target="_blank">forum</a>,</li>
+<li>
+<a href="https://graphjs.com/docs/components/profile-list" target="_blank">profiles</a>,</li>
+<li><a href="https://graphjs.com/docs/components/group" target="_blank">groups</a></li>
+<li><a href="https://graphjs.com/docs/components/messages" target="_blank">messaging</a></li>
+<li>
+<a href="https://graphjs.com/docs/components/star-button" target="_blank">ratings</a>, <a href="https://graphjs.com/docs/components/comments" target="_blank">comments</a>
+</li>
+</ul>
+<p>and <a href="https://graphjs.com/docs/" target="_blank">more</a>, as easy as adding an HTML tag such as:</p>
+<blockquote><p><strong>&lt;graphjs-forum&gt;&lt;/graphjs-forum&gt;</strong></p></blockquote>
+<p>Why is it important to componentize the social web like this, and make each functionality embeddable similarly to Youtube videos?</p>
+<p>That’s because communities are already online, primarily on a forum, or perhaps a blog, Facebook Page, wiki, even a static website, and they don’t want to leave everything behind and start things over on a new platform for a single additional functionality that they may need. And gluing multiple such tools (e.g., a blog and a wiki) is never an easy feat.</p>
+<p>Today, we embrace this reality and launch this new open source platform that is “<strong>componentized</strong>” by default.</p>
+<p>GraphJS makes copy/pasting social features on any web page effortless. In other words, these functionalities can now go wherever your community already is. To illustrate this, take a look at <a href="https://blocksplain.com/" target="_blank">Blocksplain.com</a>, a self-hosted Wordpress blog by <a href="https://richardmacmanus.com/" target="_blank">Richard MacManus</a> that tracks all things blockchain related. The following is the“&lt;graphjs-message&gt;” tag in action on their <a href="https://blocksplain.com/contact/" target="_blank">Contact</a> page:</p>
+<figure><img data-width="2382" data-height="1236" src="{{site.baseurl}}/./haydin/2018/08/1*apG9dLbd9LH2uMhhHyZGrA.png"></figure>
+<p>The exact code used to achieve this native look’n feel is as follows:</p>
+<p><a href="https://gist.github.com/esokullu/855478c8df5aac6a9d64486ca555c529.js">https://gist.github.com/esokullu/855478c8df5aac6a9d64486ca555c529.js</a>
+<p>As you can see there are three steps:</p>
+<ol>
+<li>The tag itself. (graphjs-messages-composer in this particular instance). The “to” attribute is Richard’s own ID. The “anonymity” attribute is set to be “on”, meaning anyone can send a message, and not just registered members. Last but not least, you see some custom CSS with the “style” attribute.</li>
+<li>This is the standard “include the GraphJS library” step. Had you made some changes with the <a href="https://github.com/phonetworks/graphjs" target="_blank">code</a>, and compiled using “node”, you would include that file, instead of the standard <a href="https://graphjs.com/graph.js" target="_blank">https://graphjs.com/v1/graph.js</a>
+</li>
+<li>Finally, you initiate the GraphJS tags with the “GraphJS.init” call. The first argument is the public ID of the site (assigned by <a href="https://graphjs.com%29" target="_blank">https://graphjs.com)</a>and the second one sets the primary color (which is reddish in this example) for the tags that will be displayed on that page.</li>
+</ol>
+<p>The very same tag (<a href="https://graphjs.com/docs/components/messages-composer" target="_blank">graphjs-messages-composer</a>), with different attributes (dark theme, and purplish primary theme color), gives the following output:</p>
+<figure class="wp-caption"><img data-width="944" data-height="674" src="{{site.baseurl}}/./haydin/2018/08/1*UkBVoi6NFUKwP7vg--bldg.png"><br />
+<figcaption class="wp-caption-text">from emresokullu.com (my personal Jekyll site hosted at Github.com)</figcaption>
+</figure>
+<p>If you know a little bit of Javascript and you need an even more custom look and/or functionality than what the GraphJS tags offer, it is possible to accomplish that using our <a href="https://graphjs.com/docs" target="_blank">Javascript APIs</a>. For example, by attaching the following snippet to a custom styled static HTML form, you can let your members send a member a private message:</p>
+<p><a href="https://gist.github.com/esokullu/6e8b701ef3c261f698fa8f3baa0c240e">https://gist.github.com/esokullu/6e8b701ef3c261f698fa8f3baa0c240e</a>
+<p>Of course, GraphJS is not only about messaging. With the &lt;graphjs-comments&gt; tag, you can add comments to any web</p>
+<figure><img data-width="460" data-height="460" src="{{site.baseurl}}/./haydin/2018/08/1*1VAiPerP1lDrcZgbDS7FjA.png"></figure>
+<p>Or using a tag like “&lt;graphjs-forum-thread access=”public” id=”50a5a634eed9d6dad5f64daa3bef6587" /&gt;” you can display a single forum thread:</p>
+<figure><img data-width="460" data-height="460" src="{{site.baseurl}}/./haydin/2018/08/1*pUwGgBNR9AMmIduqbGqFtQ.png"></figure>
+<p>Best of all, if your web site is powered by Wordpress, you can enable GraphJS on any page or post using our <a href="https://github.com/phonetworks/graphjs-wp-plugin" target="_blank">Wordpress plugin</a>. To install, just click Plugins in the admin panel, and search “GraphJS.”</p>
+<figure class="wp-caption"><img data-width="1541" data-height="779" src="{{site.baseurl}}/./haydin/2018/08/1*IGPr06K1yrV5TPGOBvoWsg.png"><br />
+<figcaption class="wp-caption-text">GraphJS shortcodes displayed in Wordpress admin panel</figcaption>
+</figure>
+<figure class="wp-caption"><img data-width="1541" data-height="779" src="{{site.baseurl}}/./haydin/2018/08/1*tTHIs4rkf3fk7HF0iJQxMQ.png"><br />
+<figcaption class="wp-caption-text">You need to enter your GraphJS UUID in order to enable GraphJS on your Wordpress instance.</figcaption>
+</figure>
+<p>We believe GraphJS is here to enhance the lives of web developers with its wide array of social networking modules. How will it impact the world of community organizers at large and the social networking landscape? That’s really in your hands, and what you create with this;</p>
+<p>People build forums, wikis, social networks, blogs all the time. What we do here is simply to help you integrate them all easier, like you add a Gist code block to a web page. Our hope is that this will ramp up the utilitarian usage of these social tools versus the current <a href="https://waitbutwhy.com/2013/07/7-ways-to-be-insufferable-on-facebook.html" target="_blank">vanity-centric consumption patterns</a>, and eventually, we’ll end up with a better social web.</p>
+<p><a href="http://phonetworks.org/" target="_blank">Phở Networks</a>, the open source graph app library which we announced last year, set the foundations for GraphJS, and possibly for all the backend developers out there to build infinitely scalable social media experiences in the cloud with ease and at pace. Now GraphJS is aimed at bringing it closer to a larger group of people; web developers.</p>
+<p>You can try it out at <a href="https://graphjs.coma" target="_blank">https://graphjs.com</a> for as low as $8/month. Don’t forget, you can always export the data and run it on your own servers too. Because the servers behind <a href="https://graphjs.coma" target="_blank">https://graphjs.com</a> use exactly the same code that is available at <a href="https://github.com/phonetworks/graphjs-server" target="_blank">https://github.com/phonetworks/graphjs-server</a> and it’s AGPL licensed, which ensures its perpetual availability. As for the frontend components (<a href="https://github.com/phonetworks/graphjs" target="_blank">https://github.com/phonetworks/graphjs</a>), they are static. Which means, if you play with them and create your own stickers, you can host them on Github. But again, if you don’t want to deal with the complexity, just launch it at <a href="https://graphjs.com" target="_blank">https://graphjs.com</a>, implement them on your own site, we’ll run and maintain it for you.</p>
+<p>I am optimistic that with these building blocks, and their soon-to-be-announced applications, we can build a better, more useful and interoperable social web. If you’re a web developer, we invite you to try it out for yourself at <a href="https://graphjs.com/" target="_blank">https://graphjs.com</a>.</p>
+<p><em>PS: special thanks to </em><strong><em>Ozan</em></strong><em>, and Barun for their relentless work on the new app, Ceren for the visuals, Richard and Chris for their review of this post.</em></p>
+<p></body></html></p>

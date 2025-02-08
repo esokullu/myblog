@@ -1,0 +1,63 @@
+---
+layout: post
+title: Google Docs’ta Yabancı Klavye Türkçe Karakter Sorunsalı
+date: 2022-08-26 08:36:36.000000000 +03:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories: []
+tags: []
+meta:
+  _publicize_pending: '1'
+  _import_session_id: 63d21b7996734
+  _import_original_post_id: '0'
+  _oembed_db4b67cfeb8a62f00b8761f3d33e1e23: <div class="embed-youtube"><iframe title="Google
+    Docs deasciifier sonuc" width="500" height="375" src="https://www.youtube.com/embed/BiOv0ns137M?feature=oembed"
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen></iframe></div>
+  _oembed_time_db4b67cfeb8a62f00b8761f3d33e1e23: '1725538930'
+  _oembed_a0bcc0a806fcedbd8326074c5d7ef5e8: <div class="embed-youtube"><iframe title="Google
+    Docs deasciifier sonuc" width="750" height="563" src="https://www.youtube.com/embed/BiOv0ns137M?feature=oembed"
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen></iframe></div>
+  _oembed_time_a0bcc0a806fcedbd8326074c5d7ef5e8: '1731470730'
+  _elasticsearch_data_sharing_indexed_on: '2024-11-18 14:21:33'
+author:
+  login: x4pjkg22jj
+  email: x4pjkg22jj@privaterelay.appleid.com
+  display_name: EMRE SOKULLU
+  first_name: ''
+  last_name: ''
+permalink: "/2022/08/26/google-docsta-yabanci-klavye-turkce-karakter-sorunsali/"
+---
+<p><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd"><br />
+<html><body></p>
+<p>Siz de benim gibi yabancı bir klavye ile bilgisayarını kullanan ama aynı zamanda kitap yazmak gibi dev bir yazılı çabanın içinde kendini bulmuş biriyseniz, ne kadar sorunlu ve sıkıcı bir sürecin içinde olunduğuzun farkındasınızdır. Ben de geçen sene sonundan beri tam olarak bunu yapıyorum. Editör bir arkadaşımla beraber Amerikan klavye MacBook’umdan kitap yazıyoruz.</p>
+<p>Kitabı yazarken türlü türlü yazılımlar denedim, ama en sonunda, özellikle beraber çalışırken, Google Docs’ı kullanmakta karar kıldık. Google Docs bu işi sahiden de gayet iyi kıvırıyor.</p>
+<p>Daha önceleri büyük metinlerdeki İngilizce karakterleri Türkçe’ye çevirmek için <a href="https://deasciifier.com/" target="_blank">deasciifier</a> sitesini ve yazılımlarını kullanmıştım. Ama bunu Google Docs üzerinde yapmak yorucu oluyordu.</p>
+<p>Bu nedenle kitabın yarısına geldiğimizde Google Docs’ta bir eklenti yazmaya karar verdim. Zor olmadı. Halihazırda çok fazla açık kaynak çözüm var. Sadece bunları toparlayıp Google’a hazır hale getirmem gerekti.<br>Hedefim başta bu aracı kamuya açık ücretsiz bir eklenti olarak sunmaktı, ama en son mahremiyet skandallarından sonra Google geliştirici platformunu çok kısıtlamış. O yüzden nasıl yaptığımı, siz de kendi kendinize yapabilin diye, buradan yazmaya karar verdim.</p>
+<p>Süreç işte aynen şöyle;</p>
+<hr>
+<ol>
+<li>Arac menusunden “Extensions” secenegini bulup, alttan “Apps Script” secenegine tiklayin</li>
+<li>Acilan editorde iki dosya olusturmaniz gerekiyor</li>
+</ol>
+<p>Biri <em>deasciify.gs</em>:</p>
+<p><a href="https://gist.github.com/esokullu/c5aa1c447d89abc7e78aefc747eb8686">https://gist.github.com/esokullu/c5aa1c447d89abc7e78aefc747eb8686</a>
+<p>Digeri <em>sidebar.html</em></p>
+<p><a href="https://gist.github.com/esokullu/ed48faf0e52a4436a198bc684fe81b85">https://gist.github.com/esokullu/ed48faf0e52a4436a198bc684fe81b85</a>
+<p>Goruldugu uzere agir “deasciify” isini istemci tarafinda degil sunucu tarafinda yapiyoruz. Sunucu tarafinda yapilan is 152. satirda</p>
+<p>let api = “https://{url}/deasciify";</p>
+<p>ile belirtilmis. Burada url olarak ben DigitalOcean’da olusturdugum bir Function’i kullandim. AWS sevenler icin AWS dilinde bunun karsiligi Lambda. Burada kullandigim fonksiyon da acik kaynak dunyadan geliyor ve aynen su sekilde:</p>
+<p><a href="https://gist.github.com/esokullu/bb9552b77a2ad2f064ecdb303a026ebe">https://gist.github.com/esokullu/bb9552b77a2ad2f064ecdb303a026ebe</a><br />
+<hr>
+<p>Sonuc mu? Asagidaki video gibi:</p>
+<p>[embed]https://www.youtube.com/watch?v=BiOv0ns137M[/embed]<br />
+<hr>
+<p>Aramızda Google’da çalışan ya da Google Docs’a eklenti koyma konusunda deneyimli birisi varsa benle iletişime geçsin ve şu işi daha da kolaylaştıralım. Ne de olsa bu blog post’taki adımları gene sadece programlama okur yazarları takip edebileceklerdir. Ne kadar kolay, o kadar iyi.</p>
+<p>Umarım birilerinin işine yarar 👋</p>
+<p></body></html></p>

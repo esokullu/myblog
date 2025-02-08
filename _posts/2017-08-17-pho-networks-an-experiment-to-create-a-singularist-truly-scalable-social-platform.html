@@ -1,0 +1,47 @@
+---
+layout: post
+title: Phở Networks, an experiment to create a singularist &amp; truly scalable social
+  platform
+date: 2017-08-17 11:13:31.000000000 +03:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories: []
+tags: []
+meta:
+  _publicize_pending: '1'
+  _import_session_id: 63d21b7996734
+  _import_original_post_id: '0'
+  _elasticsearch_data_sharing_indexed_on: '2024-11-18 14:21:44'
+author:
+  login: x4pjkg22jj
+  email: x4pjkg22jj@privaterelay.appleid.com
+  display_name: EMRE SOKULLU
+  first_name: ''
+  last_name: ''
+permalink: "/2017/08/17/pho-networks-an-experiment-to-create-a-singularist-truly-scalable-social-platform/"
+---
+<p><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd"><br />
+<html><body></p>
+<p>The <a href="http://indieweb.org" target="_blank">IndieWeb</a> and the <a href="http://www.timewellspent.io/" target="_blank">Time Well Spent</a> movements both have valid concerns around today’s social media landscape. The social media, today, is:</p>
+<p>- Wildly commercial; serving the advertisers’ interests at the expense of consumers’ valuable time and attention.</p>
+<p>- Prone to surveillance pressure from governments, e.g. <a href="https://en.wikipedia.org/wiki/PRISM_%28surveillance_program%29" target="_blank">PRISM</a></p>
+<p>- Vulnerable to censorship.</p>
+<p>Since the early 2000s, we’ve come a long way with new forms of social media. It all started with blogging. Then we’ve seen several <a href="https://en.wikipedia.org/wiki/Social_objects" target="_blank">object-centered sociality</a> tools such as Flickr, Youtube and Twitter pop up, while at the same time, a number of multi-dimensional social networks like Friendster, MySpace, Facebook, LinkedIn came to prominence and burst.</p>
+<p>Mark Zuckerberg and co seem to be the only ones who have succeeded in building a durable company to weather the seasonality of this world, but the social media evolution has not stopped since then. Snapchat, Instagram, and Sararah are all shreds of evidence that social media is a living tissue that is becoming increasingly granular, purpose-built and diversified.</p>
+<p>Perhaps in recognition of this reality, Facebook Inc. just recently <a href="https://techcrunch.com/2017/06/22/bring-the-world-closer-together/" target="_blank">changed its mission</a> and finally gave niche communities a wider set of tools to succeed online. But, in my opinion, a monolithic product is not exactly what their target audience had been asking for. A fast-paced domain like social media requires fast-paced solutions that allow one to prototype new forms in no time while ensuring that if it breaks, it won’t collapse.</p>
+<p>Enter <a href="http://phonetworks.org" target="_blank">Phở Networks</a>. An <a href="https://github.com/phonetworks" target="_blank">open source</a>, MIT licensed project that I’ve been personally spending a lot of time on, for almost a year.</p>
+<p>- In a nutshell, Phở Networks lets you create independent social media outlets.</p>
+<p>- Phở Networks is singularist; because it allows you to create any form of social media, with a simple language that many sysadmins have already familiarized themselves with in the UNIX world; ACL — access-control lists. You may use Phở Networks as your blogging engine, but you can also create a whole new Facebook. Need proof? Just visit the <a href="http://github.com/pho-recipes" target="_blank">pho-recipes Github repo</a>.</p>
+<p>- Phở Networks is lightning fast and massively scalable, because it takes an unorthodox approach as to how it handles data. With Phở, data is stored and served warm right off the RAM, as it is built on top of <a href="http://redis.io" target="_blank">Redis</a>. With this unconventional RAM-first design choice (in contrast to caching, which most high-scale web sites have opted into), Phở Networks won’t be cheap (for now), but it will be blazing-fast and super low-maintenance by avoiding the limitations of sharding and hard-drive friction.</p>
+<p>- And Phở Netwoks is created in GraphQL. When you start using it, you’ll realize creating social media outlets in SQL, with MVC architecture, just like you’ve created static or quasi-dynamic web sites, wasn’t meaningful. After all, those technologies were never meant to be natural to the fabric of social. Here’s a sample GraphQL schema file that defines a Tweet:</p>
+<p><code># pho-graphql-v1</code></p>
+<p><code>type Tweet implements ObjectNode <br>@edges(in:"User:Post, User:Like, User:Consume", out:"Mention")<br>@permissions(mod: "0x07555", mask:"0xfffff")<br>@properties(expires: 0, editable: false, volatile: false, revisionable: false)<br>{<br> id: ID!,<br> content: String! @constraints(maxLength: 140),<br> create_time: Date! @now<br>}</code></p>
+<p>- Last but not least, thanks to its decentralized architecture, Phở can never be censored. Your data is yours.</p>
+<p>Phở will also be an opportunity for me to give hundreds of thousands of network creators on Ning and Grou.ps who were left in the cold when both companies were forced to switch to a premium model.</p>
+<p>Enough with words. If you have <a href="http://vagrantup.com" target="_blank">Vagrant</a> installed, giving it a try is as easy as:</p>
+<p><code>vagrant init phonetworks/xenial-php71-pho<br>vagrant up<br>vagrant ssh<br># now we're in the virtual machine.<br>cd /opt/pho-kernel<br>php -a<br># now this is PHP shell<br>include "play.php";</code></p>
+<p>If you like it, please give it a star on Github at <a href="https://github.com/phonetworks/pho-kernel" target="_blank">https://github.com/phonetworks/pho-kernel</a>, and spread the word. We will be enhancing this with REST and GraphQL API interfaces, so that the stack would be accessible not only by PHP, but universally.</p>
+<p></body></html></p>

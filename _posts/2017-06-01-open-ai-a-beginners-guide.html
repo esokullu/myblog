@@ -1,0 +1,59 @@
+---
+layout: post
+title: 'Open AI: a beginner’s guide'
+date: 2017-06-01 23:06:23.000000000 +03:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories: []
+tags: []
+meta:
+  _publicize_pending: '1'
+  _import_session_id: 63d21b7996734
+  _import_original_post_id: '0'
+  _oembed_4bc8ed8993e1af52b30832b4a5bfb5d3: <div class="embed-youtube"><iframe title="How
+    Convolutional Neural Networks work" width="500" height="281" src="https://www.youtube.com/embed/FmpDIaiMIeA?feature=oembed"
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen></iframe></div>
+  _oembed_time_4bc8ed8993e1af52b30832b4a5bfb5d3: '1725521288'
+  _oembed_547b9c8ae31cc50349499c4bb51438fd: <div class="embed-youtube"><iframe title="How
+    Convolutional Neural Networks work" width="750" height="422" src="https://www.youtube.com/embed/FmpDIaiMIeA?feature=oembed"
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen></iframe></div>
+  _oembed_time_547b9c8ae31cc50349499c4bb51438fd: '1731470734'
+  _elasticsearch_data_sharing_indexed_on: '2024-11-18 14:21:46'
+author:
+  login: x4pjkg22jj
+  email: x4pjkg22jj@privaterelay.appleid.com
+  display_name: EMRE SOKULLU
+  first_name: ''
+  last_name: ''
+permalink: "/2017/06/01/open-ai-a-beginners-guide/"
+---
+<p><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd"><br />
+<html><body></p>
+<p><a href="https://en.wikipedia.org/wiki/Artificial_intelligence" target="_blank">AI</a> is <a href="https://cleantechnica.com/2017/05/21/softbank-saudi-tech-fund-now-largest-world-93-billion-investments-ai-robotics-etc/" target="_blank">hot</a>, and it’s <a href="https://blogs.nvidia.com/blog/2017/05/23/ai-app-skin-cancer-diagnosis/" target="_blank">real</a>. There’s no doubt. And when it comes to openness in AI, we are lucky. Thanks to Berkeley University, Google, and Facebook, we have great libraries one can use to form convolutional neural networks that will solve the world’s biggest problems; like “<a href="https://www.engadget.com/2017/05/15/not-hotdog-app-hbo-silicon-valley/" target="_blank">hot dog or not</a>” 😃</p>
+<p>Joke aside, this article is intended to give you a quick introduction to the hottest convolutional neural network frameworks available. For those of you who don’t know, <a href="https://en.wikipedia.org/wiki/Convolutional_neural_network" target="_blank">convolutional neural networks</a> are brain replicas in software form, literally. They were invented by <a href="https://en.wikipedia.org/wiki/Yann_LeCun" target="_blank">Yann LeCun</a> at NY University -now Director of AI Research at Facebook- by examining the biological structure of cat brains and replicating them in software.</p>
+<p>It turns out the mechanics of our brains have something in common with numerical limits. In mathematics, the shape of a polynomial function such as (x4 + x3) is defined by its highest exponent only.</p>
+<figure><img data-width="1024" data-height="292" src="{{site.baseurl}}/./haydin/2017/06/0*ZQtGTyY5bpdRlTR1.png"></figure>
+<p>Similarly, you may remember from <a href="https://en.wikipedia.org/wiki/L%27H%C3%B4pital%27s_rule" target="_blank">L’Hopital’s Rule</a> in Calculus that in limits with undefined results, the only exponent that matters is the largest ones.</p>
+<p>The theory behind convolutional neural networks is similar. What happens is, you divide your inputs into smaller parts, apply a series of random mathematical calculations on your data, then regroup them in smaller chunks, continue this operation a number of times (depending on your needs) and you end up with a label descriptor, that lets you classify this input as either a hot dog or not, or something more useful. In other words, similarly to highest exponents with polynomial functions, the boldest wins.</p>
+<p>Ok, this may not be the most academically sound explanation of what a convolutional neural network is, but it is an intro. The 20-mins video below dives deeper:</p>
+<p>[embed]https://youtu.be/FmpDIaiMIeA[/embed]</p>
+<p>If it’s still not crystal clear for you, you’re not alone, and Feynman’s words on quantum mechanics are entirely applicable in this context too; “If you think you understand convolutional neural networks then you don’t understand convolutional neural networks”</p>
+<p>Without further ado, let’s begin with some practical frameworks that you can use today to get started with AI:</p>
+<p><a href="https://www.tensorflow.org" target="_blank">TensorFlow</a>:</p>
+<p>For starters, TensorFlow is Google’s deep learning framework. It is well-documented, has the backing of a very large community as well as Google, and some of the best and brightest minds in AI are working on it. At one point they even hired <a href="http://daggerfs.com/" target="_blank">Yangqing Jia</a> who is the founder of Caffe, which is one of the main frameworks on our list. TensorFlow is available in Python (most stable), Java, Go and C++.</p>
+<p><a href="http://caffe.berkeleyvision.org/" target="_blank">Caffe</a>: (recommended)</p>
+<p>Caffe, born at Berkeley University, is the library that’s been around for the longest time and that has the most academic backing. Most scientific papers run on Caffe examples, but this has started to change after Google’s introduction of TensorFlow. Caffe has a successor <a href="https://caffe2.ai" target="_blank">Caffe2</a>, which Facebook is sponsoring. Caffe’s founder <a href="http://daggerfs.com/" target="_blank">Yangqing Jia</a> has moved to Facebook in February this year, to get back to work on his brainchild. Caffe is written in C++ but has interfaces in Python and Matlab as well.</p>
+<p><a href="http://deeplearning.net/software/theano/" target="_blank">Theano</a>:</p>
+<p>Theano with Lasagne is a breeze to program and run convolutional neural networks. Its Python-based interface is the easiest to use and get started with, but it lacks the same level of academic and corporate backing.</p>
+<p>These are just some of the most popular ones. Facebook at one point used <a href="http://torch.ch" target="_blank">Torch</a> heavily as well, but nowadays they seem to be investing in Caffe2 more than anything else.</p>
+<p>Also, those of you who just want to play with well-known networks without much insight, Nvidia has a great web-based user interface that one can use to train via public-domain networks such as AlexNet and Googlenet, called <a href="https://developer.nvidia.com/digits" target="_blank">DIGITS</a>. It is free.</p>
+<p>Last but not least, for a successful convolutional neural network, you need massive, high-quality datasets during the training. Just remember how many years it takes for a baby to recognize the most basic shapes, like a circle, triangle, and rectangle. The noise factor aside, we are talking about the most advanced neural network here. Similarly, you’ll need to train your baby convolutional neural networks with high-quality datasets to fit them properly. When it comes to open data, your options are not as abundant, but we do have some. For image processing, you can take a look at <a href="http://www.image-net.org/" target="_blank">ImageNet</a>. For natural language (or text) processing based applications, <a href="http://www.ngrams.info/" target="_blank">n-grams</a> might be a good start.</p>
+<p>The choice is yours. Let the hack begin. This article is not a tutorial, so we won’t show you how to use these frameworks. If you have any preference over one or the other, please let us know in your tweets in response to this article. More articles on the topic of AI are coming soon…</p>
+<p></body></html></p>

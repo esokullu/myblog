@@ -1,0 +1,73 @@
+---
+layout: post
+title: The State of Decentralized Social Networks in Jan, 2020
+date: 2020-01-24 05:16:53.000000000 +03:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories: []
+tags: []
+meta:
+  _publicize_pending: '1'
+  _import_session_id: 63d21b7996734
+  _import_original_post_id: '0'
+  _elasticsearch_data_sharing_indexed_on: '2024-11-18 14:21:42'
+author:
+  login: x4pjkg22jj
+  email: x4pjkg22jj@privaterelay.appleid.com
+  display_name: EMRE SOKULLU
+  first_name: ''
+  last_name: ''
+permalink: "/2020/01/24/the-state-of-decentralized-social-networks-in-jan-2020/"
+---
+<p><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd"><br />
+<html><body></p>
+<p><em>The original of this article was published at </em><a href="https://www.emresokullu.com/#The_State_of_Decentralized_Social_Networks_in_Jan,_2020-5ed209ad3003b19b3a42b8ae34fa9736-GJS" target="_blank"><em>https://www.emresokullu.com/#-5ed209ad3003b19b3a42b8ae34fa9736-GJS</em></a></p>
+<p>The race for the next decentralized social network has officially begun after this tweet from the Twitter CEO, Jack Dorsey:</p>
+<figure><img data-width="586" data-height="657" src="{{site.baseurl}}/./haydin/2020/01/1*NLR00Dj3ccRWYojSj16ZEw.png"></figure>
+<p>There are two fundamental issues with existing social networks:</p>
+<p>1. <strong><em>Brain hacking</em></strong>: Platforms have shown capabilities of manipulating and deceiving people, through fake news, the spread of misinformation and echo chambers.</p>
+<p>2. <strong><em>Censorship</em></strong>: Governments all around the world censor social networks when they feel threatened; thus suppressing people’s right to access information.</p>
+<p>The main benefit of a decentralized social networking architecture would be it could be a recipe to both of the problems mentioned above.</p>
+<p>There have been many attempts to create open social networks. From a technical standpoint, they may be categorized as follows:</p>
+<ol>
+<li>Distributed Data (DD)</li>
+<li>Distributed Identities (DI)</li>
+<li>Distributed Communities (DC)</li>
+</ol>
+<h3>1. Distributed Data (DD)</h3>
+<p>In the distributed data model, all user-generated-content (including multimedia assets as well as database records) are stored:</p>
+<p>(a) in a verifiable ledger such as Ethereum or Blockstack.</p>
+<p>(b) peer-to-peer via distributed gossip protocols such as secure-scuttlebut (<a href="https://ssbc.github.io/scuttlebutt-protocol-guide/" target="_blank">https://ssbc.github.io/scuttlebutt-protocol-guide/</a>)</p>
+<h4>1a. Verifiable Ledger</h4>
+<p>This approach comes with the clear disadvantage of crypto-verification overhead and paying transaction fees for each insert or update operation.</p>
+<p>Blockchains are known to be highly inefficient data stores. They are usable only with handful of applications where the benefits outweigh the drawbacks; unfortunately, social networking is not one of them. As a consequence, many early attempts like Leeroy have already shut down, and there are only a small number of them like Peepeth, which still exist but continue to fizzle.</p>
+<p>Besides, with the DD approach, consumers are required to install an additional browser plug-in to use the services. While MetaMask, in the form of a Chrome extension, is the most user-friendly one, the time has proven, on multiple occasions, that extra friction, no matter how little it is, never goes welcome with the consumers.</p>
+<h4>1b. Peer to Peer</h4>
+<p>Crypto is not the only backend adapter for the distributed data model. There is ongoing research in creating distributed data social networks</p>
+<p>· Completely peer-to-peer among the client’s browsers [see gun.eco]</p>
+<p>· Through public cloud services such as Dropbox and Google Drive, [see <a href="https://www.cse.unr.edu/~mgunes/papers/16-ASONAM-POSNapp.pdf" target="_blank">POSN</a>]</p>
+<p>but both are far from becoming applicable.</p>
+<p>One can develop a peer-to-peer social network without the limitations of the browser, using a distributed gossip protocol such as <a href="https://ssbc.github.io/scuttlebutt-protocol-guide/" target="_blank">secure-scuttlebutt</a> on a desktop or mobile app similar to Patchwork, Planetary. A big disadvantage with this approach is that the nicknames (to identify the user) cannot be unique since there is no global registry, and the only solution is to rely on centralized services. Last but not least, the Reddit-like desktop app Aether follows a similar approach but with an ephemeral append-only log (DAG) to store data, rather than relying on ssb.</p>
+<h3>2. Distributed Identities (DI)</h3>
+<p>There are several federated protocols, led by Microformats and Indieweb communities that suggest personal websites to represent one’s online digital identity. Accordingly, such sites interact with each other via open pub/sub-protocols such. Even W3C has specific recommendations that date back to 2017 like WebMention (<a href="https://www.w3.org/TR/webmention/" target="_blank">https://www.w3.org/TR/webmention/</a>)</p>
+<p>IndieWeb oversees online activities to be aggregated in open-source silos. For example, micro.blog is one such aggregator that can interact with people’s websites via WebMentions.</p>
+<p>These small groups of like-minded “distributed identities” advocates gather online and offline sporadically, but they have failed to gain mainstream attention, due to:</p>
+<p>- The lack of consistent user-interface</p>
+<p>- Difficulty in the adoption of these technologies and launching such personal websites.</p>
+<p>- Inefficiencies at the aggregator (newsfeed) level</p>
+<p>Although, the distributed identity approach has no or negligible performance drawbacks as opposed to the DD, with a minor exception of the “aggregator” level. On a positive note, they are philosophically similar to SMTP and POP3, which constitute the email communications infrastructure.</p>
+<h3>3. Distributed Communities (DC)</h3>
+<p>Perhaps the most realistic one among all three approaches is the “Distributed Communities” one, where the social network is not one giant graph (a la Facebook or Twitter) but constitutes of many subgraphs around shared topics. Ning and Grou.ps are two such early, yet central examples. On the other hand, the new open-source upcomers such as Mastodon, GNU Social and DiSo do the same, taking a somewhat more decentralized approach where community owners host the open-source software on their own, and there’s an underlying open federated protocol (ActivityPub) that connects the subgraphs.</p>
+<p>The main benefit of the DC approach is the fact that, besides technical decentralization, more abstract (yet important) aspects of the network such as governance, moderation, and value-creation, are also split between multiple parties. This is a positive direction, because otherwise, in a giant decentralized network, it will prove much harder to own, regulate, and moderate than one might estimate.</p>
+<p>The disadvantage of current DC based software is, while they borrow some ideas from the DI approach, with WebMention allowing Mastodon cross-follows across the networks, they are far from being usable and useful, mainly because the identities are completely isolated from each other. To illustrate it on Mastodon, <a href="mailto:esokullu@mastodon.social" target="_blank">esokullu@mastodon.social</a> (with the email <a href="mailto:esokullu@gmail.com" target="_blank">esokullu@gmail.com</a>) has nothing in common with the same user on a different network, say <a href="mailto:esokullu@php-enthusiasts.social" target="_blank">esokullu@php-enthusiasts.social</a> with the same email esokullu@gmail.com.</p>
+<p>Additionally, the architecture they’re built with, which is based on traditional MVC and relational databases, makes them impossible to scale out in a way regular people or software developers can.</p>
+<p>Last but not least, with their shared-nothing data model, Mastodon and the likes have no answer to the censorship problem.</p>
+<h3>How is Phở Networks different?</h3>
+<p>Phở Networks is essentially a programming language, rather than a social network. But it lets people build decentralized social applications. Hence, it’s more comparable to secure-scuttlebutt rather than the social networking platforms discussed above.</p>
+<p>Phở does not attempt to recreate a whole new web with the client-to-client model replacing the traditional server-client one. It’s rather an attempt to create a camaraderie-network between servers. Accordingly, the decentralized apps created on Phở communicate with each other and reroute queries when one is blocked. This is in order to solve the <a href="https://medium.com/@emresokullu/dagitik-acik-kaynak-iletisim-protokolu-34c922cc10c4" target="_blank">censorship</a> problem that also touched me personally in 2014.</p>
+<p>Phở uses the Kademlia principles to achieve its goals. Kademlia was also used in Gnutella, and IPFS. For more information, you may take a look at the paper at <a href="https://www.phonetworks.org/assets/Whitepaper%202020.pdf" target="_blank">https://www.phonetworks.org/assets/Whitepaper%202020.pdf</a></p>
+<p>Last but not least, Phở comes with an open-source application called <a href="https://groupsville.com/" target="_blank">Groupsville</a>, which lets people build their own online communities in line with the DC (Distributed Communities) approach, hence it is a completely a decentralized social networking stack.</p>
+<p></body></html></p>

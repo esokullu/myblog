@@ -1,0 +1,73 @@
+---
+layout: post
+title: Dagitik Acik Kaynak Iletisim Protokolu
+date: 2014-03-20 21:29:37.000000000 +02:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories: []
+tags: []
+meta:
+  _publicize_pending: '1'
+  _import_session_id: 63d21b7996734
+  _import_original_post_id: '0'
+  _elasticsearch_data_sharing_indexed_on: '2024-11-18 14:21:55'
+author:
+  login: x4pjkg22jj
+  email: x4pjkg22jj@privaterelay.appleid.com
+  display_name: EMRE SOKULLU
+  first_name: ''
+  last_name: ''
+permalink: "/2014/03/20/dagitik-acik-kaynak-iletisim-protokolu/"
+---
+<p><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd"><br />
+<html><body></p>
+<figure class="wp-caption">
+<figcaption class="wp-caption-text">Header by: Today’s Zaman</figcaption>
+</figure>
+<p><br><br />
+<h4>War-Time Free Communications Platform</h4>
+<p>Dun gece TIB’in aldigi Twitter’i durdurma karari bir kez daha gosterdi ki <strong><em>dunyanin</em></strong> acik kaynak ve <strong><em>dagitik</em></strong><em> </em>bir Twitter benzeri iletisim protokolu ve platformuna ihtiyaci var.</p>
+<p>Bugune kadar cok proje onerildi, kimi denendi ama basarili olamadi kimi yapim asamasinda, ama Turkiye’deki uygulamalar gosteriyor ki boylesi bir platformda en onemli olmazsa olmaz, IP ve URL bagimsizlik. Cunku bugun TC devleti siteleri IP tabanli ban’liyor, L-7 icerik filtreleme yapiyor. Diger onemli faktor, tum mesajlasmalarin kriptolu sekilde gonderilmesi, cunku gene TIB’in acikladigi birsey, artik Cin’deki gibi icerik bazli filtreleme cilginligina da girisilecek.</p>
+<p>Bunla ilgili benim bir onerim var, hatta github’ini kurup Twitter’da “iki gune” diye de duyurusunu yaptim. Neyse ki sonraki saatlerde ufak bir DNS degisikligiyle dahi Twitter’a girilebildigi duyuldu, VPN’ler sorunsuz calisiyor, o yuzden o projenin elzemligi onceligini yitirmis gorunuyor, fakat ilk adimlari atmak onemli. Bu adimlari bu blog post’la atacagim, katilimcilar olursa projeyi gelistiririz.</p>
+<p>Boylesi bir proje sadece mevcut Turkiye yonetimi ve diger dikta yonetimlerine karsi ozgur iletisim icin degil, ayni zamanda ABD gibi diger demokratik bildigimiz ulkelerdeki NSA Prism gibi olusumlara karsi da onemli.</p>
+<p>Benim onerecegim projenin en onemli kismi “katilim” olacak. Dagitik bir yapinin guvenligi katilima dogru orantili. Soyle ki, Tor’u dusunun:</p>
+<figure><img data-width="510" data-height="326" src="{{site.baseurl}}/./haydin/2014/03/79e04-1_a-tkqnpus5fu1sbuu2aqg.png"></figure>
+<p>Boylesi bir sistemde katilim ne kadar az olursa, NSA gibi devlet bagimli kurulumlar, inanilmaz kaynaklari sayesinde sisteme o kadar casus “node” yerlestirip, o kadar kolay sistemi ellerine gecirebilir.</p>
+<p>Oncelikle belirtmem lazim, benim onerecegim sistem bir web sitesi degil, bildiginiz bir Windows, Mac, Linux yani masaustu programi. Neden? Cunku web sitesi ile dagitik yapi kurmak imkansiz. O yuzden Ahmet Alp Balkan arkadasimin bana Twitter’dan <a href="https://twitter.com/ahmetalpbalkan/status/446801212688445440" target="_blank">onerdigi</a> <a href="https://github.com/TrsstProject/" target="_blank">Trsst</a> projesi bu amac icin biraz yetersiz kaciyor.</p>
+<p>Oyle bir program olmali ki:</p>
+<ul>
+<li>Icinde hem sunucu hem istemci yapisini barindirmali.</li>
+<li>Sunucu yapisi bloklanmasi en imkansiz, en cok kullanilan ve ev router’larinin en cok acik biraktigi veya en kolay acilabilen (ornek: Superonline her port’u ev kullanicilarina actirmiyor) 80'den iletisim kurmali.</li>
+<li>80 no’lu port’tan yapilan iletisim icerige bagli filtrelemeye tabi tutulmamak icin goze batmayacak sekilde yapilmali. Dolayisiyla standard HTTP metotlariyla olmali.</li>
+<li>Mesajlasma icerigi de icerige bazli filtrelemeye takilmamak icin disardan anlasilmaz ve belli bir standardin disinda olmali. O yuzden plaintext 80 HTTP protokolu uzerinden SSL benzeri bir handshake metotuyla sistemdeki istemci ve sunucunun kriptolu sekilde konusmasi lazim.</li>
+<li>Erisilebilir sunucular master IP (ya da usta IP) olarak adlandirilmali.</li>
+<li>Dagitik sistem prensipi icin bu madde cok onemli. Platform belirli bir sayida usta IP ile hizmete baslamali; insanlarin katilimiyla usta IP sayisi artmali ve dagitik olarak master IP’ler farkli bilgisayarlarda saklanmli. Master IP’ler bloklaninca, komsu IP’ler taranmali, her komsu IP kendi master IP veritabanini istemciyle paylasmali. 4 milyarlik IPv4 IP havuzu dusunulunce komsu IP havuzu taramak (lookup) islemi katilim degerine ters orantili imkansiz gorunebilir (IPv6 hesaplamiyorum dahi), ama genis katilim + akilli algoritmalar (sadece sistemin en cok kullanildigi bolge ve ISP’lerin internet bloklarinin taranmasi gibi) tarama surelerini saat, gun, hafta, aylarla sinirlamada yardimci olabilir.</li>
+<li>Sistemdeki “usta bilgisayarlar” kendi aralarinda surekli mesaj veritabanlarini paylasilmali. Paylasma kisminda libtorrent’ten faydalanilabilir. Ya da openstack swift’teki ring yapisina benzer bir yapi dagitik olarak uygulanabilir. Benim aklima gelen cok daha basit round-robin random bir sistem de uygulanabilir; sonucta yuksek katilimda bunlarin hepsi, kullanici dostu olmamakla beraber, fonksiyonel olacaktir.</li>
+</ul>
+<p>Sonuc olarak ortaya cikacak sistem:</p>
+<ul>
+<li>Son kullanici icin kesinlikli kullanici dostu olmayacak.</li>
+<li>Su anki Twitter gibi “real time” olmayacak.</li>
+</ul>
+<p>Bu yuzden projenin adini “War-Time Free Communications Platform” gibi belirlemeyi uygun gordum. Cunku insanlar boylesi bir projeyi ancak savas zamani gibi olagandisi durumlarda, dikta liderlere karsi kullanmak isteyebilirler.</p>
+<p>Dikkat ederseniz boylesi bir sistemde kullanici anonimligiyla ilgili su asamada cok onemli bir onlem alinmamis. Elbette dagitik bir sistemde devletin sistem katilimcilarindan istemcilerin IP bilgilerini istemesi anonimite acisindan dogal bir sinirlayici faktor, fakat isin o kismini simdilik Tor gibi bir aracin kullanimina birakmak daha gercekci olacaktir.</p>
+<p>Toparlamak gerekirse, sistemdeki veritabanlari sunlar olacak:</p>
+<ul>
+<li>Mesaj DB: kendi mesajlarin ve random kisilerin mesajlari kriptolu ve LZMA gibi sozluk tabanli ve sikistirma oranini sikistirma suresine tercih edebilen bir algoritma ile sikistirilmis bicimde saklanacak, ne kadar buyuklukte olacaklari bir conf dosyasinda belirtilecek (ornek default: 2gb))</li>
+<li>Master IP DB: tum usta IP’ler bu veritabaninda saklanacak.</li>
+</ul>
+<p>Bu her iki veritabani icin de cevaplayici ve guncelleyici ikiser thread paralel calisacak. Kriptolama SSL benzeri yapilacak bir public key ve master secret key handshake’i sonrasi yapilacak.</p>
+<p>Son olarak, akillarda canlandirmak icin boylesi bir sistemin ornek internet trafigi su sekilde olacak:</p>
+<p>GET / =&gt; URL filtrelemede goze batmamak icin / handshake icin kullanilsin.</p>
+<p>POST /8j$d_~qd =&gt; kriptolanmis GET ya da POST degerleri master IP, mesaj DB paylasimlarinda kullanicilar. Boylece hem IP hem icerigi ongorulemez olacagindan (disardan bakan icin belirli bir pattern olmadigindan) URL filtrelemeye takilamaz olacaktir. Decrypt edildiginde yukardaki mesaj belirli bir protokol etrafinda sunlara donusebilir:</p>
+<ul>
+<li>send me the latest tweets you have of x, y, z (sordugu usta kendindeki x’i dondurur, ayni mesaji o da kendi ustalarina “send me the latest tweets you have of y, z” diye sorar)</li>
+<li>send me a piece of your tweet db.</li>
+<li>send me your master IPs.</li>
+<li>gibi gibi…</li>
+</ul>
+<p>Projeye katkida bulunmak isteyen, URL filtrelemeye ayri bir cozum onerisi olan, burda ortaya koydugum prensiplere geribildirimi olanlar yorum olarak seslerini duyursunlar. Boylesi bir sisteme ihtiyacimiz var. Halihazirda bir elzem teskil etmedigi ortaya ciktigi icin simdilik uc gune yetistirme acelesi icinde olmayacagim, ama boyle acik kaynak bir calisma icinde olmak isteyenlerle iletisim halinde olalim. Bir noktada Twitter’in da boyle bir calismaya destek vermesi mumkun olabilir; kendi firehose’unu paylasmasa da handle database’ini seed ederse insanlar ayni seed’lerle bu “war-time twitter” uzerinden de takip ettikleri insanlarin yeni paylasimlarini bu dagitik ag uzerinden gorebilirler (ne de olsa bir savas zamani durumda onemli olan o anki paylasimlar, oncekiler degil) Bitirmeden once soylemekte fayda var, bu sistemde veritabanlari ve conf dosyalari onemli yer alacak, o yuzden bu dosyalari yedeklemeniz ve eski ICQ’deki gibi bir yerden bir yere tasimaniz gerekebilir (cok kullanici dostu!) — neyse ki yedekleme icin artik dropbox gibi birsey kullanilabilir (onu da yasaklamazlarsa)</p>
+<p></body></html></p>
