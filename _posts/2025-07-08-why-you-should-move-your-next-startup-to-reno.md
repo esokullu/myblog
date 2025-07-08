@@ -20,12 +20,13 @@ Boise, ID – Quaint and affordable, but too windy, too cold, and a bit too far 
 Enter Reno, NV.
 
 Reno offers the best of all worlds:
-✅ No state income tax
-✅ Mild, four-season climate
-✅ 4-hour drive to San Francisco Bay Area (and it can be autonomous driving!)
-✅ World-class outdoor access (Lake Tahoe, skiing, hiking, mountain biking)
-✅ A budding arts and tech community (yes, Burning Man is born here)
-✅ And significantly lower housing and office rental prices than coastal hubs
+
+* No state income tax
+* Mild, four-season climate
+* 4-hour drive to San Francisco Bay Area (and it can be autonomous driving!)
+* World-class outdoor access (Lake Tahoe, skiing, hiking, mountain biking)
+* A budding arts and tech community (yes, Burning Man is born here)
+* And significantly lower housing and office rental prices than coastal hubs
 
 This is precisely why Tesla chose Reno to build its first Gigafactory, and why Blockchains LLC, led by entrepreneur Jeffrey Berns, is developing a blockchain-powered smart city in nearby Storey County. Switch, the data infrastructure giant, also built one of the world's largest data centers here.
 
