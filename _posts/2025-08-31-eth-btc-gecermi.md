@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "ETH’in BTC’yi Flippening Söylentileri & Kripto Tahminleri Üzerine Düşünceler"
+title: "ETH’in BTC’yi Flippening Söylentileri Üzerine Düşünceler & Kripto Tahminleri"
 date: 2025-08-31
 ---
 
