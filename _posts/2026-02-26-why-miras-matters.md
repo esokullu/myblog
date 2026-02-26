@@ -13,7 +13,6 @@ tags:
 excerpt: "In every cycle, crypto forces us to confront the same uncomfortable question: Is this truly a store of value — or just a casino with better UX?"
 ---
 
-# Why Miras Matters
 
 In every cycle, crypto forces us to confront the same uncomfortable question:
 
