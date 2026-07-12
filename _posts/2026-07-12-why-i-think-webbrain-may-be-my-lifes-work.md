@@ -6,7 +6,7 @@ date: 2026-07-12
 
 *Intelligence is becoming too important to remain entirely rented, centralized, and controlled by a handful of companies.*
 
-I have spent most of my adult life building things on the internet. But WebBrain feels different from anything I have worked on before.
+I have spent most of my adult life building things on the internet. But [WebBrain](https://webbrain.one) feels different from anything I have worked on before.
 
 It feels less like another product and more like infrastructure that needs to exist.
 
@@ -40,9 +40,9 @@ This is why offline LLMs matter so much to me.
 
 But an offline model sitting inside a terminal or chat window is not enough. Intelligence becomes dramatically more useful when it can interact with the environment in which we already live and work: the browser.
 
-That is the role I see for WebBrain.
+That is the role I see for [WebBrain](https://webbrain.one).
 
-WebBrain is an attempt to give locally running intelligence eyes and hands inside the browser—to let it read pages, understand interfaces, conduct research, complete workflows, and help people use the web without requiring every thought and action to pass through a remote server.
+[WebBrain](https://webbrain.one) is an attempt to give locally running intelligence eyes and hands inside the browser—to let it read pages, understand interfaces, conduct research, complete workflows, and help people use the web without requiring every thought and action to pass through a remote server.
 
 Local AI is not merely a privacy feature. It is a form of technological resilience and individual sovereignty.
 
@@ -50,7 +50,7 @@ We should continue using the extraordinary intelligence available in the cloud. 
 
 ## No Lab Can Teach an Agent the Entire Web
 
-The second reason WebBrain must be open source—whether it is used with offline LLMs or through cloud services and APIs—is more practical.
+The second reason [WebBrain](https://github.com/webbrain-one/webbrain) must be open source—whether it is used with offline LLMs or through cloud services and APIs—is more practical.
 
 No AI lab can map the entire web.
 
@@ -60,7 +60,7 @@ A food-delivery site in Istanbul does not behave like an electronics marketplace
 
 Even the most capable model cannot automatically know every detail. It will often make incorrect assumptions or become confused—especially when running on the smaller offline models people can realistically operate at home.
 
-This became especially clear to me through recent WebBrain contributions.
+This became especially clear to me through recent [WebBrain](https://github.com/webbrain-one/webbrain) contributions.
 
 One contributor added an adapter for Galaxus and Digitec, covering storefronts across Switzerland and several European countries. The contributor discovered that the sites' bot protection blocks WebBrain's normal background-fetching tools. Without local guidance, the agent would repeatedly retry the blocked approach and derail. The adapter teaches it to stop retrying and use the page's DOM and accessibility tree instead.
 
@@ -78,7 +78,7 @@ The knowledge of the world cannot.
 
 That knowledge lives with people: users who speak the language, understand the culture, use the service, encounter the failure, and know what the agent should have done instead.
 
-This is why open source is not a philosophical decoration attached to WebBrain. It is the only plausible scaling strategy.
+This is why open source is not a philosophical decoration attached to [WebBrain](https://github.com/webbrain-one/webbrain). It is the only plausible scaling strategy.
 
 The world has to teach the agent how the world works.
 
@@ -170,11 +170,11 @@ The internet itself may not fit on your laptop.
 
 But a useful representation of intelligence derived from it increasingly can.
 
-And once that intelligence can run locally, privately, and offline, WebBrain can connect it back to the live web whenever the user chooses.
+And once that intelligence can run locally, privately, and offline, [WebBrain](https://webbrain.one) can connect it back to the live web whenever the user chooses.
 
 ## Why WebBrain
 
-WebBrain is still early. There is an enormous amount left to build.
+[WebBrain](https://webbrain.one) is still early. There is an enormous amount left to build.
 
 But the direction feels clear to me.
 
@@ -184,10 +184,12 @@ We need an open system that can learn the countless local rules of the web from 
 
 We need a private layer of intelligence that belongs to the individual—not because cloud AI is bad, but because something this personal and this important should never have only one mode of access.
 
-WebBrain is my attempt to help build that layer.
+[WebBrain](https://github.com/webbrain-one/webbrain) is my attempt to help build that layer.
 
 A browser agent that can use the best online models when people want them, local models when people need them, and contributions from the entire world to understand the web in all its complexity.
 
 I do not know how large WebBrain will become.
 
 But I know the problem is large enough—and important enough—to spend a life working on.
+
+You can try it at [webbrain.one](https://webbrain.one), and the code is open source at [github.com/webbrain-one/webbrain](https://github.com/webbrain-one/webbrain).
