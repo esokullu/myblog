@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Why I Think WebBrain May Be My Life's Work"
-date: 2026-05-19
+date: 2026-07-12
 ---
 
 *Intelligence is becoming too important to remain entirely rented, centralized, and controlled by a handful of companies.*
