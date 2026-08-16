@@ -113,7 +113,7 @@ Since I posted the first results, [TechMDAI](https://x.com/TechMDAI/status/20861
 
 ## Why I care about this
 
-I work on browser agents, and browser agents cannot get everything they need from the DOM. They have to see screenshots, dashboards, charts, dialogs, rich-text editors, and where controls physically sit on a page. In my own open-model testing, DeepSeek V4 Flash and Laguna XS 2.1 were the standouts in their respective size classes — and both were text-only.
+I work on browser agents at [WebBrain](https://github.com/webbrain-one/webbrain), and browser agents cannot get everything they need from the DOM. They have to see screenshots, dashboards, charts, dialogs, rich-text editors, and where controls physically sit on a page. In my own open-model testing, DeepSeek V4 Flash and Laguna XS 2.1 were the standouts in their respective size classes — and both were text-only.
 
 Replacing them with much larger native VLMs meant giving up the language quality I picked them for. So the question became whether visual perception could be added on top instead. It can.
 
