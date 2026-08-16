@@ -19,7 +19,7 @@ Weights and artifacts:
 
 ## The architecture
 
-<img src="{{site.baseurl}}/assets/2026/08/frozen-vision-retrofit-architecture.png" alt="Adding vision without retraining the LLM: a frozen 417M MoonViT-3d encoder feeds 1152-d image features through a trained 40.1M connector into a frozen 284B DeepSeek V4 Flash" data-width="1080" data-height="607">
+<img src="{{ '/_attachments/frozen-vision-retrofit-architecture.png' | relative_url }}" alt="Adding vision without retraining the LLM: a frozen 417M MoonViT-3d encoder feeds 1152-d image features through a trained 40.1M connector into a frozen 284B DeepSeek V4 Flash" data-width="1080" data-height="607">
 
 Three components, only one of which learns anything:
 
